@@ -1,4 +1,8 @@
+/**
+ * 创建一个 http 服务
+ */
 const http = require('http');
+
 
 http
 	.createServer((req, res) => {

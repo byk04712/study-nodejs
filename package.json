@@ -1,0 +1,25 @@
+{
+  "name": "study-nodejs",
+  "version": "1.0.0",
+  "description": "学习nodejs",
+  "main": "server/server.js",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "cheerio": "^0.22.0",
+    "request": "^2.75.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byk04712/study-nodejs.git"
+  },
+  "author": "739694218@qq.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/byk04712/study-nodejs/issues"
+  },
+  "homepage": "https://github.com/byk04712/study-nodejs#readme"
+}

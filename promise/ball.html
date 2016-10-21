@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>传统方式实现球滚动效果</title>
+	<style type="text/css">
+		.ball {
+			width: 60px;
+			height: 60px;
+			border-radius: 30px;
+			margin-top: 10px;
+		}
+		.red {
+			background-color: red;
+		}
+		.yellow {
+			background-color: yellow;
+		}
+		.green {
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<h2>传统同步方式实现圆球滚动效果</h2>
+	<div id="red" class="ball red" style="margin-left: 0px;"></div>
+	<div id="yellow" class="ball yellow" style="margin-left: 0px;"></div>
+	<div id="green" class="ball green" style="margin-left: 0px;"></div>
+
+	<script type="text/javascript">
+		function animate(ball, distance, cb) {
+			setTimeout(function() {
+				var ml = parseInt(ball.style.marginLeft, 10);
+
+				if (ml == distance) {
+					cb && cb();
+				} else {
+					if (ml < distance) {
+						ml++;
+					} else if (ml > distance) {
+						ml--;
+					}
+					ball.style.marginLeft = ml + 'px';
+					animate(ball, distance, cb);
+				}
+			}, 10);
+		}
+
+		var ball1 = document.getElementById("red");
+		var ball2 = document.getElementById("yellow");
+		var ball3 = document.getElementById("green");
+
+		animate(ball1, 100, function() {
+			animate(ball2, 200, function() {
+				animate(ball3, 300, function() {
+					animate(ball3, 150, function() {
+						animate(ball2, 150, function() {
+							animate(ball1, 150, function() {
+								alert('效果演示完毕，请刷新再次浏览。');
+							})
+						})
+					});
+				})
+			})
+		});
+	</script>
+</body>
+</html>
