@@ -9,3 +9,4 @@ https://nodejs.org/dist/latest-v6.x/docs/api/
 - `school` 目录下演示模块化功能。
 - `http` http 模块相关知识
 - `promise` promise 功能代码功能块
+- `buffer` buffer 功能代码功能块
