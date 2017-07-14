@@ -28,7 +28,8 @@ var credentials = {key: privateKey, cert: certificate,passphrase:"111111"};
  */
 const options = {
 	key: fs.readFileSync('ssh_key.pem'),
-	cert: fs.readFileSync('ssh_cert.pem')
+	cert: fs.readFileSync('ssh_cert.pem'),
+	passphrase: '111111'
 };
 
 https.createServer(options, (req, res) => {
